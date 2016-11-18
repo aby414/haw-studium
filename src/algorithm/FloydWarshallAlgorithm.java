@@ -54,15 +54,17 @@ public class FloydWarshallAlgorithm {
 			
 		}
 		
+		this.minLength = this.distanceMatrix[Arrays.asList(this.vertexArray).indexOf(startVertex)][Arrays.asList(this.vertexArray).indexOf(endVertex)];
 		
 		
-		for(int i = 0; i < this.distanceMatrix.length; i++){
-			System.out.print(this.vertexArray[i].getName() + "   ");
-			for(int j = 0; j < this.distanceMatrix.length; j++){
-				System.out.printf("%3.5f    ", this.distanceMatrix[i][j]);
-			}
-			System.out.println();
-		}
+		
+//		for(int i = 0; i < this.distanceMatrix.length; i++){
+//			System.out.print(this.vertexArray[i].getName() + "   ");
+//			for(int j = 0; j < this.distanceMatrix.length; j++){
+//				System.out.printf("%3.5f    ", this.distanceMatrix[i][j]);
+//			}
+//			System.out.println();
+//		}
 		
 	}
 	
@@ -110,4 +112,19 @@ public class FloydWarshallAlgorithm {
 		return null;
 	}
 
+	public double getMinLength(){
+		return this.minLength;
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+

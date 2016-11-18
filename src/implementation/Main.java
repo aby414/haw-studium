@@ -14,6 +14,7 @@ import org.jgrapht.ext.EdgeNameProvider;
 import org.jgrapht.ext.VertexNameProvider;
 
 import algorithm.BreadthFirstSearch;
+import algorithm.FloydWarshallAlgorithm;
 import exporter.Exporter;
 
 public class Main {
@@ -25,18 +26,15 @@ public class Main {
 		// InputStreamReader(System.in));
 		// System.out.println("Bitte geben Sie einen Graphennamen ein:");
 		// String graphName = br.readLine();
-		String graphName = "graph01";
-		Graph graph = checkGraph(graphName);
-		Exporter.exportDOT(PATHNAME + graphName, graph);
-
-		 Vertex start = new Vertex("k");
-		 Vertex end = new Vertex("k");
-		BreadthFirstSearch bfs = new BreadthFirstSearch(graph);
-		bfs.findShortestPath(start, end);
-		for(Vertex v: bfs.getPath()){
-		System.out.println(v.getName());
-		}
-		System.out.println(bfs.getWayLength());
+//		String graphName = "graph03";
+//		Graph graph = checkGraph(graphName);
+//		Exporter.exportDOT(PATHNAME + graphName, graph);
+//
+//		 Vertex start = new Vertex("Bremen");
+//		 Vertex end = new Vertex("Kiel");
+		//FloydWarshallAlgorithm floy = new FloydWarshallAlgorithm(graph);
+		//floy.findShortestPath(start, end);
+		
 		//bfs.findPath(start);
 
 		// br.close();
